@@ -105,14 +105,9 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(array){
-  let result = [];
-  for(let i = 0; i < reviews.length; i++){
-    if(reviews[i].array === array){
-      result.push(`${reviews[0].name}, ${reviews[0].rating} ${reviews[0].feedback}`);
-    }
-  }
-  return result;
+function addReview(array, name, rating, feedback){
+  array[name][rating] = feedback;
+  return array;
 }
 
 
